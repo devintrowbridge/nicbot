@@ -1,3 +1,6 @@
+import random
+from giphyapi import get_nicgif
+
 nicQuotes = [
     "I Want To Take His Face... Off. Eyes, Nose, Skin, Teeth. It's Coming Off.",
     "Got My First Chemistry Set When I Was Seven, Blew My Eyebrows Off, We Never Saw The Cat Again, Been Into It Ever Since.",
@@ -292,3 +295,10 @@ nicQuotes = [
     "I think a good movie is a good movie whether that falls into a genre or not.",
     "When I work, I really try to get absorbed in the character. Unless I want to do something playful with the camera, I'm not too worried about where the camera is or positions.",
 ]
+
+def get_response():
+    i = random.randint(0, 3)
+    if i == 1:
+        return get_nicgif()
+    else:
+        return random.choice(nicQuotes)
