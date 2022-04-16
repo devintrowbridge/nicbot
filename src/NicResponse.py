@@ -297,7 +297,7 @@ nicQuotes = [
 ]
 
 def get():
-    i = random.randint(0, 3)
+    i = random.randint(0, 1)
     if i == 1:
         return get_nicgif()
     else:
