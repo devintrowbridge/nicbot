@@ -296,7 +296,7 @@ nicQuotes = [
     "When I work, I really try to get absorbed in the character. Unless I want to do something playful with the camera, I'm not too worried about where the camera is or positions.",
 ]
 
-def get_response():
+def get():
     i = random.randint(0, 3)
     if i == 1:
         return get_nicgif()

@@ -5,7 +5,7 @@ import os
 import random
 
 from NicNames import nicNames
-from NicQuotes import nicQuotes
+import NicResponse
 from NicWatches import nicWatches
 
 client = discord.Client()
@@ -23,7 +23,7 @@ async def on_message(message):
 
     elif any(x in message_lower for x in nicNames):
         print('I found a message for me: {}'.format(message_lower))
-        answer = random.choice(nicQuotes)
+        answer = NicResponse.get()
         await message.channel.send(answer)
         
     elif message.content == 'raise-exception':
